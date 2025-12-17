@@ -27,9 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = []
 
-import dj_database_url
-DATABASES = {
-    'default': dj_database_url.config(default='postgres://user:password@host:port/dbname')
+
 }
 # Application definition
 
