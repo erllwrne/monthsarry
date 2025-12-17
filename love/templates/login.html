@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>30 Monthsarry 💖</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="hearts-background"></div>
+
+    <div class="login-card">
+        <h1>30 Months with You 💕</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="date" name="date" placeholder="Anniversary Date" required><br>
+            <button type="submit">Enter</button>
+        </form>
+        <p class="message">{{ message }}</p>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

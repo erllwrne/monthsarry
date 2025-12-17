@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Love 💖</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="hearts-background"></div>
+    <h1>Happy 30 Months 💕</h1>
+    <div class="cards-container">
+        {% for card in cards %}
+        <div class="love-card" onclick="showHeartExplosion(event, {{ card.id }})">
+            <div class="polaroid">
+                <img src="{{ card.image.url }}" alt="{{ card.title }}">
+                <div class="caption">{{ card.description }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
